@@ -1,0 +1,163 @@
+/**
+ * Дизайн-токены Снабдика v2.0
+ * Единственный источник значений — Design.md. Тема исключительно светлая.
+ * Контраст: рамка контрола ≥ 3:1, текст и placeholder ≥ 4.5:1 на светлых поверхностях.
+ */
+
+:root {
+  /* ── Поверхности ─────────────────────────────────────────────────────── */
+  --color-bg: #F7F8FA;          /* полотно приложения */
+  --color-bg-subtle: #EFF1F5;   /* шапка таблицы, служебные заливки */
+  --color-bg-elevated: #FFFFFF; /* панели, таблицы, модальные окна */
+  --color-bg-hover: #F3F5F9;    /* наведение на строку */
+  --color-bg-selected: #E8F0FE; /* выбранная строка */
+  --color-bg-inset: #F1F3F7;    /* вложенные заливки (поля, чипы) */
+
+  /* ── Границы ─────────────────────────────────────────────────────────── */
+  --color-border: #E4E7EC;
+  --color-border-subtle: #EDF0F4;  /* сверхтонкие разделители строк */
+  --color-border-strong: #7A8494;
+  --color-border-control: #868F9B;        /* рамка полей и чекбоксов, 3.3:1 на белом */
+  --color-border-control-hover: #5F6875;  /* рамка при наведении */
+  --color-border-button: #D0D7DE;         /* кнопки и чипы: распознаются по тексту, рамка декоративна */
+  --color-border-button-hover: #A8B1BD;
+
+  /* ── Текст ───────────────────────────────────────────────────────────── */
+  --color-text: #15181D;
+  --color-text-muted: #626A78;
+  --color-text-subtle: #626A78;
+  --color-text-disabled: #A9AFB9;   /* только для отключённых контролов */
+  --color-text-placeholder: #6B7380; /* 4.8:1 на белом */
+  --color-text-inverse: #FFFFFF;
+
+  /* ── Акцент ──────────────────────────────────────────────────────────── */
+  --color-accent: #2563A6;
+  --color-accent-hover: #1E528A;
+  --color-accent-active: #194677;
+  --color-accent-subtle: #EFF4FF;
+  --color-accent-border: #B9CDFF;
+  --color-accent-contrast: #FFFFFF;
+
+  /* ── Семантика ───────────────────────────────────────────────────────── */
+  --color-success: #15803D;
+  --color-success-subtle: #ECFDF3;
+  --color-success-border: #ABEFC6;
+  --color-success-strong: #106433;
+
+  --color-warning: #B45309;
+  --color-warning-subtle: #FFF7ED;
+  --color-warning-border: #FED7AA;
+  --color-warning-strong: #92400E;
+
+  --color-danger: #B42318;
+  --color-danger-subtle: #FEF3F2;
+  --color-danger-subtle-hover: #FCE4E2;
+  --color-danger-border: #FECDCA;
+  --color-danger-focus-ring-alpha: rgba(180, 35, 24, 0.18);
+  --color-danger-strong: #912018;
+
+  --color-info: #1D4ED8;
+  --color-info-subtle: #EFF4FF;
+  --color-info-border: #B9CDFF;
+
+  --color-violet: #6941C6;
+  --color-violet-subtle: #F4F3FF;
+  --color-violet-border: #D9D6FE;
+
+  /* ── Фокус ───────────────────────────────────────────────────────────── */
+  --color-focus-ring: var(--color-accent);
+  --color-focus-ring-alpha: rgba(37, 99, 166, 0.18);
+
+  /* ── Оверлей ─────────────────────────────────────────────────────────── */
+  --color-overlay: rgba(16, 24, 40, 0.38);
+  --color-overlay-soft: rgba(16, 24, 40, 0.16);
+  --color-overlay-photo: rgba(16, 24, 40, 0.72);
+  --color-tooltip: #1D2129;
+
+  /* ── Типографика ─────────────────────────────────────────────────────── */
+  /* Системный UI шрифт сохраняет метрики и не требует загрузки веб-шрифта. */
+  --font-family: Inter, "Segoe UI", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Mono", Consolas, monospace;
+
+  --text-2xs: 12px;
+  --text-xs: 12px;
+  --line-xs: 16px;
+  --text-sm: 14px;
+  --line-sm: 20px;
+  --text-base: 14px;
+  --line-base: 20px;
+  --text-lg: 16px;
+  --line-lg: 24px;
+  --text-xl: 20px;
+  --line-xl: 28px;
+  --text-2xl: 24px;
+  --line-2xl: 32px;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  --tracking-tight: -0.01em;
+
+  /* ── Отступы (4/8 px сетка) ──────────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* ── Радиусы ─────────────────────────────────────────────────────────── */
+  --control-height: 36px;
+  --control-radius: 6px;
+  --shadow-control: 0 1px 0 rgba(27, 31, 36, 0.04);
+  --shadow-control-inset: inset 0 1px 2px rgba(27, 31, 36, 0.04);
+  --control-height-sm: 32px;
+
+  --radius-xs: 4px;
+  --radius-sm: 4px;   /* поля внутри ячеек таблицы, бейджи */
+  --radius-md: 6px;   /* кнопки, поля, меню */
+  --radius-lg: 8px;   /* карточки, панели и диалоги */
+  --radius-xl: 8px;   /* крупные поверхности / шторки */
+  --radius-full: 999px;
+
+  /* ── Тени (тонированы в сине-серый, а не чистый чёрный) ──────────────── */
+  --shadow-xs: 0 1px 1px rgba(16, 24, 40, 0.04);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.10);
+  --shadow-lg: 0 12px 32px rgba(16, 24, 40, 0.14);
+  --shadow-xl: 0 24px 48px rgba(16, 24, 40, 0.18);
+  --shadow-sticky: 0 1px 0 var(--color-border), 0 2px 4px rgba(16, 24, 40, 0.06);
+
+  /* ── Размеры интерфейса ──────────────────────────────────────────────── */
+  --sidebar-width: 244px;
+  --sidebar-collapsed-width: 56px;
+  --topbar-height: 56px;
+  --statusbar-height: 28px;
+  --table-row-height: 40px;
+  --table-row-height-compact: 32px;
+  --table-header-height: 40px;
+
+  /* ── Движение ────────────────────────────────────────────────────────── */
+  --ease-standard: cubic-bezier(0.2, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-instant: 70ms;
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 260ms;
+
+  /* ── Z-слои ──────────────────────────────────────────────────────────── */
+  --z-sticky: 10;
+  --z-drawer: 60;
+  --z-overlay: 1000;
+  --z-modal: 1001;
+  --z-tooltip: 1100;
+  --z-toast: 1200;
+}
+
+
+
+
+

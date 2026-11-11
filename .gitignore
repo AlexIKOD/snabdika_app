@@ -1,0 +1,123 @@
+# ============================================
+# Snabdika_app — .gitignore
+# ============================================
+
+# --- Secrets & local config ---
+.env
+.env.*
+*.secret
+*.key
+*.pem
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Local tool configs ---
+opencode.json
+skills-lock.json
+taste-SKILL.md
+.ai-factory.json
+
+# --- Node / frontend ---
+app/node_modules/
+app/dist/
+app/build/
+app/.vite/
+app/coverage/
+app/.eslintcache
+app/npm-debug.log*
+app/yarn-debug.log*
+app/yarn-error.log*
+app/pnpm-debug.log*
+app/package-lock.json
+
+# --- Tauri / Rust ---
+app/src-tauri/target/
+app/src-tauri/Cargo.lock
+app/src-tauri/*.dSYM/
+
+# --- Python / backend ---
+**/__pycache__/
+*.py[cod]
+*$py.class
+app/backend/.pytest_cache/
+app/backend/build/
+app/backend/dist/
+app/backend/*.egg-info/
+app/backend/.coverage
+app/backend/coverage/
+app/backend/.mypy_cache/
+app/backend/.ruff_cache/
+app/backend/*.spec
+app/backend/*.log
+app/backend/.venv/
+app/backend/venv/
+
+# --- Runtime / temp data ---
+app/.runtime/
+app/backend/*.sqlite
+app/backend/*.sqlite-wal
+app/backend/*.sqlite-shm
+*.log
+*.pid
+
+# --- Local skill mirrors (canonical lives in ~/.agents/skills/) ---
+.agents/
+.codex/
+.gemini/
+.claude/
+.opencode/
+
+# --- Scratch / working files ---
+.scratch/
+
+# --- Playwright test artifacts ---
+.playwright-mcp/
+playwright-report/
+test-results/
+
+# --- Hypothesis (property-based testing cache) ---
+.hypothesis/
+.pytest_cache/
+.normalization_audit/
+.research/
+.workbuddy-ai/
+
+# --- AI Factory QA artifacts (large test data, screenshots) ---
+.ai-factory/qa/
+.ai-factory/patches/
+
+# --- Parquet / catalog caches ---
+*.parquet
+catalog.parquet
+*.arrow
+
+# --- Large data files (input/working) ---
+database/
+input_doc/
+*.xlsx
+*.xls
+*.csv
+
+# --- Vite temp files ---
+app/vite.config.ts.timestamp-*.mjs
+
+# --- Archives / large binaries ---
+*.zip
+*.tar.gz
+*.whl
+*.exe
+*.msi
+*.dmg
+*.pkg
+
+# --- Generated docs (if any) ---
+docs/.generated/
+*.pdf
